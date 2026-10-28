@@ -4,40 +4,42 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Camilo Vegga · Por Amor al Arte</title>
-<meta name="description" content="El escritorio de Camilo Vegga · Por Amor al Arte. Proyectos creativos, ideas y procesos.">
-<meta name="theme-color" content="#cfdcee">
+<meta name="description" content="Camilo Vegga · Por Amor al Arte. Amor y creatividad al servicio del arte.">
+<meta name="theme-color" content="#04060b">
 <meta property="og:title" content="Camilo Vegga · Por Amor al Arte">
-<meta property="og:description" content="El escritorio de Camilo Vegga: proyectos creativos, ideas y procesos.">
-<meta property="og:image" content="https://camilovegga.com/assets/fondos/nubes.jpg">
+<meta property="og:description" content="Amor y creatividad al servicio del arte.">
+<meta property="og:image" content="https://camilovegga.com/assets/fondo.jpg">
 <meta property="og:url" content="https://camilovegga.com/">
 <link rel="icon" type="image/png" href="assets/simbolo.png">
-<link rel="preload" as="image" href="assets/fondos/nubes.jpg">
+<link rel="preload" as="image" href="assets/fondo.webp" type="image/webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/escritorio.css">
+<link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#04060b;--ink:#EEF3FA;--muted:#8E9AAE}
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;background:var(--bg);color:var(--ink)}
+  body{font-family:"Geist Mono",ui-monospace,Menlo,monospace;-webkit-font-smoothing:antialiased;overflow:hidden}
+  /* the same background as Camilo's MYND: his blurred photo, a dark veil and a little grain */
+  .bg{position:fixed;inset:0;background:url(assets/fondo.jpg) center 30%/cover;background-image:image-set(url(assets/fondo.webp) type("image/webp"),url(assets/fondo.jpg) type("image/jpeg"));transform:scale(1.04);animation:breathe 18s ease-in-out infinite alternate}
+  .veil{position:fixed;inset:0;background:linear-gradient(180deg,rgba(4,6,11,.30) 0%,rgba(4,6,11,.45) 35%,rgba(4,6,11,.78) 75%,rgba(4,6,11,.88) 100%)}
+  .grain{position:fixed;inset:0;pointer-events:none;mix-blend-mode:overlay;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  main{position:relative;z-index:1;height:100%;height:100dvh;display:grid;place-items:center;padding:24px 16px}
+  h1{margin:0;width:min(760px,88vw);animation:rise 1.6s cubic-bezier(.2,.7,.2,1) both}
+  h1 img{display:block;width:100%;height:auto;filter:drop-shadow(0 6px 30px rgba(0,0,0,.45))}
+  footer{position:fixed;z-index:1;left:0;right:0;bottom:max(22px,env(safe-area-inset-bottom));text-align:center;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);animation:rise 1.6s .5s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @keyframes breathe{from{transform:scale(1.04)}to{transform:scale(1.1)}}
+  @media (prefers-reduced-motion:reduce){.bg,h1,footer{animation:none}}
+</style>
 </head>
 <body>
-<div id="wall" aria-hidden="true"></div>
-<div id="haze" aria-hidden="true"></div>
-
-<header id="menubar">
-  <div class="mb-l">
-    <button class="mb-logo" data-win="sobre" aria-label="Sobre Camilo Vegga"><img src="assets/simbolo.png" alt=""></button>
-    <b class="mb-name">Camilo Vegga</b>
-    <button class="mb-item" data-win="proyectos">Proyectos</button>
-    <button class="mb-item" id="mbFondo" aria-haspopup="true" aria-expanded="false">Fondo</button>
-  </div>
-  <div class="mb-r"><span id="clock"></span></div>
-  <div id="fondoMenu" class="menu" role="menu" hidden></div>
-</header>
-
-<main id="desk" aria-label="Escritorio"></main>
-<p id="empty" hidden>Los proyectos van a aparecer aquí, uno por uno.</p>
-
-<nav id="dock" aria-label="Programas"></nav>
-<div id="wins"></div>
-
-<script src="assets/escritorio.js"></script>
+<div class="bg" aria-hidden="true"></div>
+<div class="veil" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<main>
+  <h1><img src="assets/por-amor-al-arte.png" width="967" height="160" alt="Por Amor al Arte. Amor y creatividad al servicio del arte, creatividad y arte al servicio del amor, arte y amor al servicio de la creatividad."></h1>
+</main>
+<footer>Camilo Vegga</footer>
 </body>
 </html>
