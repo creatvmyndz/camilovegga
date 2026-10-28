@@ -41,7 +41,7 @@ img{display:block}
 .ico.sel .lb{background:#2f6bff;text-shadow:none}
 .ico.drag{z-index:5;cursor:grabbing}
 .ico.drag .th{transform:scale(1.06)}
-#empty{position:fixed;left:50%;top:46%;transform:translate(-50%,-50%);margin:0;padding:10px 16px;border-radius:999px;font:500 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.95);text-shadow:0 1px 4px rgba(0,0,0,.35);background:rgba(255,255,255,.14);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);white-space:nowrap}
+#empty{position:fixed;left:50%;top:46%;transform:translate(-50%,-50%);margin:0;padding:10px 16px;border-radius:999px;font:500 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.25);background:rgba(25,40,70,.28);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);white-space:nowrap}
 
 /* dock */
 #dock{position:fixed;z-index:20;left:50%;bottom:max(10px,env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;align-items:flex-end;gap:6px;padding:7px 9px;border-radius:20px;
